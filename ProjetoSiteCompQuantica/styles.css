@@ -1,0 +1,225 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+ 
+/* Menu de Navegação */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav .menu li {
+    margin: 0 15px;
+}
+
+nav .menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+nav .menu a:hover {
+    background-color: #555;
+    opacity: 0.8;
+}
+
+/* Imagem Principal */
+.imagem-principal img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Seção de Temas */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image-right {
+    float: right;
+    margin: 0 0 10px 10px;
+    width: 30%;
+    border-radius: 10%;
+}
+
+.temas {
+    text-align: justify;
+}
+
+/* Linha Divisória */
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/*Histórico*/
+.historico {
+   text-align: justify; 
+}
+#grupo {
+    text-align: center;
+    padding: 20px;
+}
+
+.container-grupo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Alinha os membros no centro */
+    gap: 20px; /* Espaço entre os membros */
+}
+
+.membro {
+    flex: 1; /* Para garantir que os membros ocupem espaço uniformemente */
+    max-width: 200px; /* Controla a largura máxima dos membros */
+    text-align: center;
+}
+
+.membro img {
+    width: 100px; /* Ajusta o tamanho das imagens */
+    height: 100px;
+    border-radius: 50%; /* Deixa as imagens em formato circular */
+}
+
+.membro h3 {
+    margin-top: 10px;
+}
+
+.membro p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Tecnologias Utilizadas */
+#tecnologias {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+#tecnologias h2 {
+    margin-bottom: 20px;
+}
+
+#tecnologias p {
+    font-size: 18px;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .links-uteis a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+footer .navegacao-portal a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+footer .navegacao-portal a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    nav .menu {
+        flex-direction: column;
+    }
+
+    nav .menu li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .image-right {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #grupo {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .reporteres {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .membro img {
+        margin: 0 0 10px 0;
+    }
+    .botão-voltar-pag-anterior {
+        
+            background-color: gray; /* Cor de fundo */
+            color: white; /* Cor do texto (branco) */
+            border: none; /* Remover borda */
+            padding: 10px 20px; /* Espaçamento interno do botão */
+            text-align: center; /* Centralizar o texto */
+            text-decoration: none; /* Remover sublinhado */
+            display: inline-block; /* Exibir como bloco inline */
+            font-size: 16px; /* Tamanho da fonte */
+            cursor: pointer; /* Mostrar cursor de ponteiro ao passar sobre o botão */
+            border-radius: 5px; /* Bordas arredondadas */
+          }
+          
+          .botão-voltar-pag-anterior:hover {
+            background-color: #0d9676; /* Cor de fundo ao passar o mouse (hover) */
+    }
+}
+
+@media (max-width: 480px) {
+    nav .menu a {
+        padding: 8px 15px;
+    }
+
+    .membro h3 {
+        font-size: 18px;
+    }
+
+    .membro p {
+        font-size: 14px;
+    }
+
+    #tecnologias p {
+        font-size: 16px;
+    }
+
+    footer .links-uteis a, footer .navegacao-portal a {
+        font-size: 14px;
+    }
+}

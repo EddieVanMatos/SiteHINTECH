@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Define o conjunto de caracteres utilizado na página -->
+    <meta charset="UTF-8">
+    <!-- Define a responsividade da página, ajustando-a conforme o dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Página de Notícia</title>
+
+    <!-- CSS embutido usando a tag <style> -->
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Estilo para o menu de navegação */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Estilo para o wrapper do conteúdo (texto e imagem) */
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* Estilo para o texto */
+        p {
+            flex: 1;
+            margin: 0;
+            padding-right: 20px;
+            text-align: justify;
+        }
+
+        /* Estilo para a imagem alinhada à direita */
+        .img-direita {
+            max-width: 30%;
+            margin-left: 20px;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            margin-top: 20px;
+        }
+
+        /* Estilo para o botão */
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* Estilo para a seção final */
+        #fim {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .img-direita {
+                max-width: 100%;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho da página com links de navegação -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Link para o início da página -->
+                <li><a href="#inicio">Início</a></li>
+                <!-- Link para o final da página -->
+                <li><a href="#fim">Final da Página</a></li>
+                <!-- Link para voltar à página anterior -->
+                <li><a href="javascript:history.back()">Página Anterior</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal do conteúdo -->
+    <main>
+        <!-- Um identificador para marcar o início da página -->
+        <section id="inicio">
+            <!-- Um container que engloba o texto e a imagem -->
+            <div class="content-wrapper">
+                <!-- Texto principal utilizando Lorem Ipsum -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales lacus at sapien euismod, in
+                    interdum nisi facilisis. Cras vitae nunc ut dolor aliquet vehicula. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis egestas. Sed non eros id leo aliquam
+                    fermentum. Maecenas blandit metus ut ligula faucibus lacinia. Nulla facilisi. Sed id libero vitae
+                    ligula lacinia aliquam. Nulla facilisi. Vestibulum vitae ante varius, venenatis augue sit amet,
+                    sagittis leo. Duis in nibh vehicula, euismod magna vitae, ullamcorper ligula. Phasellus vulputate
+                    volutpat est. Suspendisse at ligula vel est dapibus bibendum. Pellentesque tincidunt luctus nunc.
+                    Aenean scelerisque dui a turpis congue, ac varius libero dapibus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales lacus at sapien euismod, in
+                    interdum nisi facilisis. Cras vitae nunc ut dolor aliquet vehicula. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis egestas. Sed non eros id leo aliquam
+                    fermentum. Maecenas blandit metus ut ligula faucibus lacinia. Nulla facilisi. Sed id libero vitae
+                    ligula lacinia aliquam. Nulla facilisi. Vestibulum vitae ante varius, venenatis augue sit amet,
+                    sagittis leo. Duis in nibh vehicula, euismod magna vitae, ullamcorper ligula. Phasellus vulputate
+                    volutpat est. Suspendisse at ligula vel est dapibus bibendum. Pellentesque tincidunt luctus nunc.
+                    Aenean scelerisque dui a turpis congue, ac varius libero dapibus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales lacus at sapien euismod, in
+                    interdum nisi facilisis. Cras vitae nunc ut dolor aliquet vehicula. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis egestas. Sed non eros id leo aliquam
+                    fermentum. Maecenas blandit metus ut ligula faucibus lacinia. Nulla facilisi. Sed id libero vitae
+                    ligula lacinia aliquam. Nulla facilisi. Vestibulum vitae ante varius, venenatis augue sit amet,
+                    sagittis leo. Duis in nibh vehicula, euismod magna vitae, ullamcorper ligula. Phasellus vulputate
+                    volutpat est. Suspendisse at ligula vel est dapibus bibendum. Pellentesque tincidunt luctus nunc.
+                    Aenean scelerisque dui a turpis congue, ac varius libero dapibus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales lacus at sapien euismod, in
+                    interdum nisi facilisis. Cras vitae nunc ut dolor aliquet vehicula. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis egestas. Sed non eros id leo aliquam
+                    fermentum. Maecenas blandit metus ut ligula faucibus lacinia. Nulla facilisi. Sed id libero vitae
+                    ligula lacinia aliquam. Nulla facilisi. Vestibulum vitae ante varius, venenatis augue sit amet,
+                    sagittis leo. Duis in nibh vehicula, euismod magna vitae, ullamcorper ligula. Phasellus vulputate
+                    volutpat est. Suspendisse at ligula vel est dapibus bibendum. Pellentesque tincidunt luctus nunc.
+                    Aenean scelerisque dui a turpis congue, ac varius libero dapibus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales lacus at sapien euismod, in
+                    interdum nisi facilisis. Cras vitae nunc ut dolor aliquet vehicula. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis egestas. Sed non eros id leo aliquam
+                    fermentum. Maecenas blandit metus ut ligula faucibus lacinia. Nulla facilisi. Sed id libero vitae
+                    ligula lacinia aliquam. Nulla facilisi. Vestibulum vitae ante varius, venenatis augue sit amet,
+                    sagittis leo. Duis in nibh vehicula, euismod magna vitae, ullamcorper ligula. Phasellus vulputate
+                    volutpat est. Suspendisse at ligula vel est dapibus bibendum. Pellentesque tincidunt luctus nunc.
+                    Aenean scelerisque dui a turpis congue, ac varius libero dapibus.
+                </p>
+                <!-- Imagem alinhada à direita do texto -->
+                <img src="imagem.jpg" alt="Imagem relacionada" class="img-direita">
+            </div>
+
+            <!-- Link para a fonte do conteúdo -->
+            <footer>
+                <p>Fonte: <a href="https://www.exemplo.com" target="_blank">https://www.exemplo.com</a></p>
+                
+            </footer>
+        </section>
+        
+
+        <!-- Botão para voltar à página principal do projeto -->
+        <button onclick="voltarPaginaPrincipal()">Voltar para a Página Principal</button>
+    </main>
+
+    <!-- Marcador para o final da página -->
+    <section id="fim">
+        <p>Fim da página</p>
+        <div><a href="#inicio">Início</a></div>
+
+    </section>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Função que redireciona o usuário para a página principal
+        function voltarPaginaPrincipal() {
+            window.location.href = "index.html"; // Substituir "index.html" pelo caminho da página principal do seu projeto
+        }
+    </script>
+
+</body>
+
+</html>

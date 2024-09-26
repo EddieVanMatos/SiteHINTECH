@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NVIDIA e Computação Quântica</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Importação de fontes do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS embutido -->
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      /* Estilo para o corpo da página */
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Estilo para o cabeçalho */
+      header {
+        background-color: #76b900;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      header nav ul li {
+        margin-right: 15px;
+      }
+
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        transition: all 0.3s ease;
+      }
+
+      header nav ul li a:hover {
+        background-color: #ffca28;
+        border-radius: 5px;
+      }
+
+      /* Espaçamento após o cabeçalho fixo */
+      main {
+        padding-top: 100px;
+      }
+
+      /* Estilo para o conteúdo */
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        color: #76b900;
+        animation: fadeIn 1s ease;
+        margin: 60px 0px;
+      }
+      h2 {
+        text-align: left;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        color: #76b900;
+        animation: fadeIn 1s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .bloco {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .titleAndParagraf {
+        padding: 20px;
+      }
+
+      .bloco:hover {
+        transform: scale(1.02);
+      }
+
+      p {
+        flex: 1;
+        text-align: justify;
+        margin-right: 20px;
+        line-height: 1.8;
+      }
+
+      /* Estilo para a imagem à direita */
+      .img-direita {
+        max-width: 40%;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-left: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .img-direita:hover {
+        transform: scale(1.05);
+      }
+
+      /* Estilo para o rodapé */
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        padding: 20px 0;
+        background-color: #f8f8f8;
+        font-size: 0.9rem;
+        color: #555;
+        border-top: 1px solid #ddd;
+      }
+
+      footer a {
+        color: #1e88e5;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Estilo para o botão */
+      button {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #76b900;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #5a8c00;
+        transform: scale(1.05);
+      }
+
+      /* Seção final */
+      #fim {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        text-align: center;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column;
+        }
+
+        .img-direita {
+          max-width: 100%;
+          margin: 20px 0;
+        }
+
+        header nav ul {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Cabeçalho da página com links de navegação -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#fim">Final da Página</a></li>
+          <li><a href="javascript:history.back()">Página Anterior</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Seção principal do conteúdo -->
+
+    <main>
+      <section id="inicio">
+        <br /><br />
+        <h1>Influência da NVIDIA na Computação Quântica</h1>
+        <div class="content">
+          <div class="bloco">
+            <div class="titleAndParagraf">
+              <h2>Pesquisa</h2>
+              <p>
+                A NVIDIA, uma das maiores empresas de tecnologia do mundo, atrai
+                uma variedade de investidores de grande porte, principalmente do
+                setor financeiro. Entre os principais investidores
+                institucionais estão grandes gestoras de ativos, como a Vanguard
+                Group e a BlackRock, que possuem bilhões de dólares em ações da
+                empresa. Além delas, fundos de pensão, como o California Public
+                Employees' Retirement System (CalPERS), e fundos soberanos
+                também possuem participações significativas. Esses investidores
+                acreditam no futuro promissor da NVIDIA, especialmente em áreas
+                como inteligência artificial, data centers e GPUs para jogos e
+                mineração de criptomoedas. O interesse desses grandes
+                investidores reflete a confiança no crescimento contínuo e na
+                liderança tecnológica da NVIDIA em vários setores-chave.
+              </p>
+            </div>
+            <img
+              src="img16.webp"
+              alt="Imagem relacionada"
+              class="img-direita"
+            />
+          </div>
+          <div class="bloco">
+            <div class="titleAndParagraf">
+              <h2>Educação</h2>
+              <p>
+                A NVIDIA, uma das maiores empresas de tecnologia do mundo, atrai
+                uma variedade de investidores de grande porte, principalmente do
+                setor financeiro. Entre os principais investidores
+                institucionais estão grandes gestoras de ativos, como a Vanguard
+                Group e a BlackRock, que possuem bilhões de dólares em ações da
+                empresa. Além delas, fundos de pensão, como o California Public
+                Employees' Retirement System (CalPERS), e fundos soberanos
+                também possuem participações significativas. Esses investidores
+                acreditam no futuro promissor da NVIDIA, especialmente em áreas
+                como inteligência artificial, data centers e GPUs para jogos e
+                mineração de criptomoedas. O interesse desses grandes
+                investidores reflete a confiança no crescimento contínuo e na
+                liderança tecnológica da NVIDIA em vários setores-chave.
+              </p>
+            </div>
+            <img
+              src="img16.webp"
+              alt="Imagem relacionada"
+              class="img-direita"
+            />
+          </div>
+          <div class="bloco">
+            <div class="titleAndParagraf">
+              <h2>Empresas</h2>
+              <p>
+                É preciso uma comunidade inteira para desenvolver uma tecnologia
+                emergente, então a NVIDIA está colaborando com o Google Quantum
+                AI, a IBM e outras empresas para levar a computação quântica ao
+                próximo nível.
+              </p>
+            </div>
+            <img
+              src="img16.webp"
+              alt="Imagem relacionada"
+              class="img-direita"
+            />
+          </div>
+        </div>
+
+        <footer>
+          <p>
+            Fontes:
+            <a
+              href="https://www.nasdaq.com/market-activity/stocks/nvda/institutional-holdings"
+              target="_blank"
+              >https://www.nasdaq.com/market-activity/stocks/nvda/institutional-holdings</a
+            >
+          </p>
+        </footer>
+      </section>
+
+      <button onclick="voltarPaginaPrincipal()">
+        Voltar para a Página Principal
+      </button>
+    </main>
+
+    <!-- Marcador para o final da página -->
+    <section id="fim">
+      <p>Fim da página</p>
+      <a href="#inicio">Início</a>
+    </section>
+
+    <script>
+      function voltarPaginaPrincipal() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

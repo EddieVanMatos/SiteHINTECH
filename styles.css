@@ -157,7 +157,8 @@ main {
     opacity: 0.9; /* Imagens com leve opacidade */
 }
 
-.tema1 h2, .tema2 h2, .tema3 h2, .tema4 h2, .tema5 h2, .tema6 h2, .tema7 h2, .tema8 h2 {
+.tema1 h2, .tema2 h2, .tema3 h2, .tema4 h2, .tema5 h2, .tema6 h2, .tema7 h2, .tema8 h2, .historico  h2 {
+
     color: #00ff00; /* Verde fluorescente para títulos */
 }
 

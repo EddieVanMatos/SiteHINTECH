@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qubit</title>
+    <link
+      rel="shortcut icon"
+      href="images/HintechLogoCut.jpeg"
+      type="image/x-icon"
+    />
+
+    <!-- Importação de fontes do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS embutido -->
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      /* Estilo para o corpo da página */
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Estilo para o cabeçalho */
+      header {
+        background-color: #76b900;
+        color: white;
+        padding: 18px 25px;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      header nav {
+        list-style-type: none;
+        justify-content: center;
+        margin: auto;
+      }
+
+      header nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+      }
+
+      header nav ul li {
+        margin-right: 15px;
+      }
+
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .links:hover {
+        background-color: rgb(107, 105, 105);
+        border-radius: 5px;
+      }
+
+      /* Espaçamento após o cabeçalho fixo */
+      main {
+        padding-top: 100px;
+      }
+
+      /* Estilo para o conteúdo */
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        color: #76b900;
+        animation: fadeIn 1s ease;
+        margin: 100px 0px;
+      }
+      h2 {
+        text-align: left;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        color: #76b900;
+        animation: fadeIn 1s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .bloco {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .titleAndParagraf {
+        padding: 20px;
+      }
+
+      .bloco:hover {
+        transform: scale(1.02);
+      }
+
+      p {
+        flex: 1;
+        text-align: justify;
+        margin-right: 20px;
+        line-height: 1.8;
+      }
+
+      /* Estilo para a imagem */
+      .imagens {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .imagem {
+        border-radius: 10px;
+        object-fit: cover;
+        margin-left: 20px;
+        transition: transform 0.3s ease;
+        width: 450px;
+      }
+
+      .imagem:hover {
+        transform: scale(1.05);
+      }
+
+      /* Estilo para o rodapé */
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        padding: 20px 0;
+        background-color: #f8f8f8;
+        font-size: 0.9rem;
+        color: #555;
+        border-top: 1px solid #ddd;
+      }
+
+      footer a {
+        color: #1e88e5;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Estilo para o botão */
+      button {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #76b900;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #5a8c00;
+        transform: scale(1.05);
+      }
+
+      /* Seção final */
+      #fim {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        text-align: center;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column;
+        }
+
+        .img-direita {
+          max-width: 100%;
+          margin: 20px 0;
+        }
+
+        header nav ul {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Cabeçalho da página com links de navegação -->
+    <body>
+      <!-- Cabeçalho da página com links de navegação -->
+      <header>
+        <a href="index.html" target="_blank">
+          <img
+            src="images/HIntechLogoPng.png"
+            alt="logo"
+            style="width: 60px; height: auto"
+          />
+        </a>
+        <nav>
+          <ul>
+            <li><a class="links" href="#inicio">Início</a></li>
+            <li><a class="links" href="#fim">Final da Página</a></li>
+            <li>
+              <a class="links" href="javascript:history.back()"
+                >Página Anterior</a
+              >
+            </li>
+            <!-- Adicionando imagem com link -->
+          </ul>
+        </nav>
+      </header>
+    </body>
+
+    <!-- Seção principal do conteúdo -->
+
+    <main>
+      <section id="inicio">
+        <br /><br />
+        <h1>Qubit</h1>
+        <div class="content">
+          <div class="bloco">
+            <div class="titleAndParagraf">
+              <h2>Qubit na NVIDIA</h2>
+              <p>
+                <b>Tecnologia Qubit NVIDIA</b>
+                <br />
+                A NVIDIA, embora não seja um fabricante de hardware quântico,
+                desempenha um papel crucial no desenvolvimento de software para
+                computação quântica. Sua plataforma CUDA Quantum oferece um
+                ambiente poderoso para simular e programar circuitos quânticos,
+                trabalhando em conjunto com diversas tecnologias de qubit. O que
+                é um qubit?
+                <br />
+                <b>• Enquanto os bits clássicos</b> representam informações como
+                0 ou 1, os qubits podem existir em uma superposição de estados,
+                sendo 0 e 1 simultaneamente. Essa propriedade, chamada de
+                superposição, é fundamental para a computação quântica.
+                <br />
+                <b>• A capacidade de estar em múltiplos</b> estados ao mesmo
+                tempo permite que os qubits realizem cálculos exponencialmente
+                mais rápidos do que os bits clássicos para determinadas tarefas.
+                <br /><br />
+                <b>Tecnologias de qubit suportadas pela CUDA Quantum:</b>
+                A NVIDIA não se limita a uma única tecnologia de qubit. A
+                plataforma CUDA Quantum é projetada para ser compatível com uma
+                variedade de tecnologias, incluindo:
+                <br />
+                <b>• Supercondutores:</b> Circuitos elétricos supercondutores
+                que exploram a mecânica quântica para armazenar e manipular
+                informações quânticas.
+                <br />
+                <b>• Íons aprisionados:</b> Átomos carregados (íons)
+                aprisionados em campos eletromagnéticos, cujos estados internos
+                podem ser manipulados para representar qubits.
+                <br />
+                <b>• Átomos neutros:</b> Átomos neutros que são resfriados a
+                temperaturas extremamente baixas e aprisionados em redes ópticas
+                para realizar cálculos quânticos.
+                <br />
+                <b>• Fótons:</b> Partículas de luz que podem ser utilizadas para
+                transmitir e processar informações quânticas. Por que a
+                diversidade de tecnologias?
+                <br />
+                <b>• Cada tecnologia tem suas vantagens:</b> Cada tecnologia de
+                qubit possui suas próprias vantagens e desvantagens em termos de
+                tempo de coerência, escalabilidade e facilidade de fabricação.
+                <br />
+                <b>• Acelerar a pesquisa:</b> Ao suportar múltiplas tecnologias,
+                a NVIDIA permite que os pesquisadores explorem diferentes
+                abordagens e identifiquem as tecnologias mais promissoras para a
+                construção de computadores quânticos escaláveis e robustos.
+                <br /><br />
+                <b>Como a NVIDIA utiliza essas tecnologias?</b>
+                <br />
+                A NVIDIA não fabrica hardware quântico, mas fornece as
+                ferramentas de software necessárias para simular e programar
+                circuitos quânticos em diferentes plataformas de hardware. Isso
+                significa que os pesquisadores podem utilizar a plataforma CUDA
+                Quantum para:
+                <br />
+                <b>• Simular circuitos quânticos:</b> A plataforma permite
+                simular circuitos quânticos de diferentes tamanhos e
+                complexidades, ajudando os pesquisadores a entender o
+                comportamento dos qubits e a desenvolver novos algoritmos.
+                <br />
+                <b>• Desenvolver software quântico:</b> A CUDA Quantum oferece
+                um conjunto de ferramentas para o desenvolvimento de software
+                quântico, permitindo que os pesquisadores criem aplicativos que
+                aproveitam o poder da computação quântica.
+                <br />
+                <b>• Colaborar com fabricantes de hardware:</b> A NVIDIA
+                colabora com diversas empresas que estão desenvolvendo hardware
+                quântico, ajudando a acelerar o desenvolvimento de sistemas
+                quânticos comerciais. <br /><br />
+                <b>Em resumo:</b>
+                A NVIDIA, com sua plataforma CUDA Quantum, está contribuindo
+                significativamente para o avanço da computação quântica ao
+                oferecer um ambiente de desenvolvimento unificado para diversas
+                tecnologias de qubit. Essa abordagem permite que os
+                pesquisadores explorem o potencial da computação quântica em
+                diversas áreas, desde a descoberta de novos materiais até o
+                desenvolvimento de algoritmos de inteligência artificial mais
+                poderosos.
+              </p>
+            </div>
+            <dic class="imagens">
+              <img
+                src="images/nvidia 3 topicos - 1.jpeg"
+                alt="Imagem relacionada"
+                class="imagem"
+              />
+              <img
+                src="images/img17.png"
+                alt="Imagem relacionada"
+                class="imagem"
+              />
+              <img
+                src="images/img18.png"
+                alt="Imagem relacionada"
+                class="imagem"
+              />
+            </dic>
+          </div>
+        </div>
+        <footer>
+          <p>
+            Fontes:
+            <a
+              href="https://www.nasdaq.com/market-activity/stocks/nvda/institutional-holdings"
+              target="_blank"
+              >https://www.nasdaq.com/market-activity/stocks/nvda/institutional-holdings</a
+            >
+          </p>
+        </footer>
+      </section>
+
+      <button onclick="voltarPaginaPrincipal()">
+        Voltar para a Página Principal
+      </button>
+    </main>
+
+    <!-- Marcador para o final da página -->
+    <section id="fim">
+      <p>Fim da página</p>
+      <a href="#inicio">Início</a>
+    </section>
+
+    <script>
+      function voltarPaginaPrincipal() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

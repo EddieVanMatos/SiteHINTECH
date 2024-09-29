@@ -30,9 +30,7 @@ header nav ul {
 header nav ul li {
     position: relative;
 }
-header :hover {
-    transform: scale(1.02);
-}
+
 
 header nav ul li a {
     text-decoration: none;
@@ -64,19 +62,21 @@ header nav ul li a:hover {
 
 
 .carousel-container {
+    z-index: -1;
     width: 100%;
-    height: 100vh; /* Preenche a altura total da tela */
     overflow: hidden;
     position: relative;
 }
 
 .carousel-slide {
+    z-index: -1;
     display: flex;
     height: 100%;
     transition: transform 2s ease-in-out; /* Transição lenta de 2s */
 }
 
 .carousel-slide a img {
+    z-index: -1;
     width: 100vw; /* Preenche 100% da largura da tela */
     height: 100vh;
     border-radius: 10px; /* Preenche 100% da altura da tela */
@@ -106,6 +106,7 @@ header nav ul li a:hover {
 
 /* Dropdown Menu */
 .dropdown-menu {
+    z-index: 10;
     display: none;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
@@ -116,14 +117,17 @@ header nav ul li a:hover {
 }
 
 .dropdown:hover .dropdown-menu {
+    z-index: 10;
     display: block;
 }
 
 .dropdown-menu li {
+    z-index: 10;
     width: 100%;
 }
 
 .dropdown-menu li a {
+    z-index: 10;
     padding: 10px 15px;
     position: relative;
     display: block;

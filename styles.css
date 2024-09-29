@@ -62,37 +62,45 @@ header nav ul li a:hover {
     height: auto;
 }
 
-/* Imagem Principal */
-.imagem-principal img {
-    width: 100%;
-    height: 100%;
-}
 
-/* Carrossel */
-.carousel {
-    display: flex;
-    padding: 20px;
-    margin-left: 40%;
+.carousel-container {
+    width: 100%;
+    height: 100vh; /* Preenche a altura total da tela */
+    overflow: hidden;
     position: relative;
-    max-width: 100%;
-    height: 100%; /* Altura do carrossel */
 }
 
-.carousel-item {
-    min-width: 200%; /* Cada item ocupa 100% da largura */
-    transition: transform 0.5s ease;
-    text-align: center;
+.carousel-slide {
+    display: flex;
+    height: 100%;
+    transition: transform 2s ease-in-out; /* Transição lenta de 2s */
 }
 
-.carousel img {
-    width: 100%;
-    border-radius: 8px;
-    max-height: 300px;
+.carousel-slide a img {
+    width: 100vw; /* Preenche 100% da largura da tela */
+    height: 100vh; /* Preenche 100% da altura da tela */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
 }
 
-.carousel p {
-    color: #00ff00;
-    font-size: 1.2rem;
+/* Botões de navegação */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 /* Dropdown Menu */
@@ -116,12 +124,14 @@ header nav ul li a:hover {
 
 .dropdown-menu li a {
     padding: 10px 15px;
+    position: relative;
     display: block;
     color: #ffffff;
     font-size: 1rem;
 }
 
 .dropdown-menu li a:hover {
+    position: relative;
     background-color: rgba(255, 255, 255, 0.3); /* Hover translúcido */
     color: #00ff00;
 }
@@ -143,7 +153,7 @@ header nav ul li a:hover {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 40px 20px;
   }
@@ -342,7 +352,5 @@ hr {
         width: calc(100% - 40px);
     }
 
-    .imagem-principal img {
-        max-height: 300px;
-    }
+
 }

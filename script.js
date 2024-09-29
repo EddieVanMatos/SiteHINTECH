@@ -42,25 +42,58 @@ window.addEventListener('resize', function () {
     }
 });
 
-// Carrossel automático
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+const carouselSlide = document.querySelector('.carousel-slide');
+const images = document.querySelectorAll('.carousel-slide a');
+let counter = 0;
+const totalImages = images.length - 1; // Desconsidera o clone
+const imageWidth = images[0].clientWidth;
 
-function showNextItem() {
-    items[currentIndex].style.display = 'none'; // Oculta o item atual
-    currentIndex = (currentIndex + 1) % totalItems; // Atualiza o índice
-    items[currentIndex].style.display = 'flex'; // Exibe o próximo item
+// Função para mover o carrossel
+function moveCarousel(direction) {
+    if (direction === 'next') {
+        if (counter >= totalImages) {
+            counter++;
+            carouselSlide.style.transform = `translateX(${-counter * imageWidth}px)`;
+            // Remover transição para pular de volta ao início
+            setTimeout(() => {
+                carouselSlide.style.transition = 'none';
+                counter = 0;
+                carouselSlide.style.transform = `translateX(0)`;
+            }, 1000); // Tempo igual à duração da transição
+        } else {
+            counter++;
+            carouselSlide.style.transform = `translateX(${-counter * imageWidth}px)`;
+            carouselSlide.style.transition = 'transform 1s ease-in-out';
+        }
+    } else if (direction === 'prev') {
+        if (counter <= 0) {
+            counter = totalImages;
+            carouselSlide.style.transition = 'none';
+            carouselSlide.style.transform = `translateX(${-counter * imageWidth}px)`;
+            setTimeout(() => {
+                carouselSlide.style.transition = 'transform 1s ease-in-out';
+                counter--;
+                carouselSlide.style.transform = `translateX(${-counter * imageWidth}px)`;
+            }, 20);
+        } else {
+            counter--;
+            carouselSlide.style.transform = `translateX(${-counter * imageWidth}px)`;
+        }
+    }
 }
 
-if (totalItems > 0) {
-    setInterval(showNextItem, 3000); // Troca de item a cada 3 segundos
-
-    // Inicializa o primeiro item
-    items.forEach((item, index) => {
-        item.style.display = index === 0 ? 'flex' : 'none';
-    });
+// Função para movimentar automaticamente
+function autoMoveCarousel() {
+    moveCarousel('next'); // Move para a próxima imagem automaticamente
 }
+
+// Definindo o intervalo de tempo para o carrossel automático (3000ms = 3 segundos)
+setInterval(autoMoveCarousel, 3000);
+
+// Event listeners para os botões de navegação manual
+document.querySelector('.next').addEventListener('click', () => moveCarousel('next'));
+document.querySelector('.prev').addEventListener('click', () => moveCarousel('prev'));
+
 
 // Função para o botão de voltar à página anterior
 document.addEventListener('DOMContentLoaded', function () {

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     background: linear-gradient(135deg, rgba(0, 0, 139, 0.9), rgba(0, 255, 0, 0.6)); /* Gradiente de azul a verde */
     color: #ffffff;
     margin: 0;
@@ -78,7 +78,8 @@ header nav ul li a:hover {
 
 .carousel-slide a img {
     width: 100vw; /* Preenche 100% da largura da tela */
-    height: 100vh; /* Preenche 100% da altura da tela */
+    height: 100vh;
+    border-radius: 10px; /* Preenche 100% da altura da tela */
     object-fit: cover; /* Ajusta a imagem sem distorcer */
 }
 
@@ -131,7 +132,6 @@ header nav ul li a:hover {
 }
 
 .dropdown-menu li a:hover {
-    position: relative;
     background-color: rgba(255, 255, 255, 0.3); /* Hover translúcido */
     color: #00ff00;
 }
@@ -156,6 +156,25 @@ main {
     max-width: 1500px;
     margin: 0 auto;
     padding: 40px 20px;
+  }
+
+  .introdução {
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        color: #00ff00;
+        animation: fadeIn 1s ease;
+        margin: 60px 0px;
+      }
+      h2 {
+        text-align: left;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        color: #00ff00;
+        animation: fadeIn 1s ease;
+      }
+
   }
 
   h1 {

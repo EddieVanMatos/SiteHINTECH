@@ -11,6 +11,7 @@ body {
     color: #ffffff;
     margin: 0;
     padding: 0;
+    
 }
 
 /* Menu de navegação */
@@ -28,6 +29,9 @@ header nav ul {
 
 header nav ul li {
     position: relative;
+}
+header :hover {
+    transform: scale(1.02);
 }
 
 header nav ul li a {
@@ -138,13 +142,88 @@ header nav ul li a:hover {
     color: #00ff00;
 }
 
-/* Conteúdo Principal */
 main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #0e20e3;
+    animation: fadeIn 1s ease;
+    margin: 60px 0px;
+  }
+  h2 {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #0e20e3;
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
     padding: 20px;
-}
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    gap: 40px;
+  }
+
+  .bloco {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .titleAndParagraf {
+    padding: 20px;
+  }
+
+  .bloco:hover {
+    transform: scale(1.02);
+  }
+
+  p {
+    flex: 1;
+    text-align: justify;
+    margin-right: 20px;
+    line-height: 1.8;
+  }
+
+  /* Estilo para a imagem à direita */
+  .img-direita {
+    max-width: 40%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .img-direita:hover {
+    transform: scale(1.05);
+  }
+
 
 /* Seções */
 .tema1, .tema2, .tema3, .tema4, .tema5, .tema6, .tema7, .tema8 {
+    
     margin-bottom: 40px;
 }
 
@@ -245,29 +324,9 @@ footer .botão-voltar-pag-anterior:hover {
     color: #00ff00;
 }
 
-/* Tecnologias Utilizadas */
-#tecnologias {
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
-    padding: 20px;
+.text {
+    color: #0e20e3;
     text-align: center;
-    margin-top: 40px;
-    color: #ffffff;
-    border-radius: 15px; /* Adicionado border-radius */
-}
-
-#tecnologias a {
-    color: #0f4c0f;
-    text-decoration: none;
-    margin: 0 10px;
-    border-radius: 15px; /* Adicionado border-radius */
-    transition: transform 0.3s ease, background-color 0.3s; /* Efeito suave */
-    padding: 10px;
-}
-
-#tecnologias a:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Hover translúcido */
-    color: #1634df;
-    transform: scale(1.1); /* Efeito de hover */
 }
 
 hr {

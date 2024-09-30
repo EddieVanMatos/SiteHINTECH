@@ -8,6 +8,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+// função para expandir o restante do conteudo
+function expandText(spanId, btnId) {
+    const moreText = document.getElementById(spanId);
+    const btn = document.getElementById(btnId);
+
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+      moreText.style.display = "inline";
+      btn.textContent = "Ler menos";
+    } else {
+      moreText.style.display = "none";
+      btn.textContent = "Ler mais";
+    }
+  }
 
 // Exibir submenu lateral em dispositivos móveis
 document.addEventListener('DOMContentLoaded', function () {

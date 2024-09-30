@@ -240,6 +240,20 @@ main {
     line-height: 1.8;
   }
 
+        /* Estilo para o texto oculto */
+        .hidden-text {
+            display: none;
+          }
+    
+          /* Seção final */
+          #fim {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+          }
+    
+
   /* Estilo para a imagem à direita */
   .img-direita {
     max-width: 40%;

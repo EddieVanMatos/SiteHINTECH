@@ -64,6 +64,13 @@ header nav ul li a:hover {
   overflow: hidden;
   position: relative;
 }
+.strongNomeSite {
+  display: flex;
+  opacity: 30%;
+  font-size: 3em;
+  color: #ffffff;
+
+}
 
 .strong {
   display: flex;
